@@ -1,8 +1,8 @@
 class Solution {
     public List<String> findRepeatedDnaSequences(String s) {
-        String temp;
+    String temp;
     HashMap<String,Integer> map = new HashMap<>();
-    List<String> list = new ArrayList<>();
+    Set<String> list = new HashSet<>();
     for(int i =0;i<s.length()-9;i++)
     {
         temp = s.substring(i,i+10);
@@ -13,14 +13,9 @@ class Solution {
         }
         else
         {
-            map.put(temp,map.get(temp)+1);
+            list.add(temp);
         }
     }
-    for(Map.Entry<String,Integer> me : map.entrySet())
-    {
-        if(me.getValue() >1)
-            list.add(me.getKey());
-    }
-    return list  ;
+    return new ArrayList(list);
     }
 }
