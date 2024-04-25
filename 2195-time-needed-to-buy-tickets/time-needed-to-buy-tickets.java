@@ -3,22 +3,24 @@ class Solution {
 
         int time=0;
         
-        while(tickets[k] !=0)
-        {
+        
+        
             for(int i = 0 ; i<tickets.length ; i++)
             {
-                if(tickets[i] >0)
+                if(i<=k)
                     {
-                        time++;
-                        tickets[i] = tickets[i]-1;
-                    }
-                
-                if(tickets[k] ==0)
-                return time;
+                        if(tickets[i]>tickets[k]) time += tickets[k];
+                        else time+= tickets[i];
 
+                    }
+                else
+                    {
+                        if(tickets[i]>=tickets[k]) time += tickets[k]-1;
+                        else time+= tickets[i];
+                    }
 
             }
-        }
+        
             return time;
 
     }
