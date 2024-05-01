@@ -7,7 +7,7 @@ class Solution {
                 for (int i = 0; i < temp.length; i++) {
                     s=temp[i].toCharArray();
                     Arrays.sort(s);
-                    System.out.println(Arrays.toString(s));
+                    
                     temp[i] = new String(s);
 
                 }
@@ -22,7 +22,7 @@ class Solution {
 
                 }
 
-                System.out.println(hash);
+               
 
                for(List<Integer> arr : hash.values())
                 {
