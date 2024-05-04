@@ -6,7 +6,6 @@ class Solution {
        
         int l;
            Arrays.sort(nums);
-                System.out.println(Arrays.toString(nums));
                 for (int i = 0; i < nums.length-1; i++) {
                     if (i>0 && nums[i]==nums[i-1]) continue;
 
