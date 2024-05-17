@@ -25,7 +25,7 @@ class Solution {
             temp="";
             while(temp.length()!=s2)
                  {
-                                          System.out.println(s2);
+                                       
 
 
                     temp+=current;
