@@ -11,6 +11,7 @@ class Solution {
        String current;
        while(x>0)
        {
+        temp="";
         if(s1%x ==0 && s2%x ==0)
         {   
 
@@ -20,20 +21,18 @@ class Solution {
             if(!temp.equals(str1))
                  {
                     x--;
-                    temp="";
+                    
                     continue;
                 }
             temp="";
             while(temp.length()!=s2)
                  {
-                                       
-
-
+                 
                     temp+=current;
                 }
             if(!temp.equals(str2))
                   {          
-                    x--;temp="";continue;
+                    x--;continue;
                     }
             return current;
         }
