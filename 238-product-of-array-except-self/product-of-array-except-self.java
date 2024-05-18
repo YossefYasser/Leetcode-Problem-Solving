@@ -11,8 +11,7 @@ class Solution {
             pre[i] =prenum;
             post[j]= postnum;
         }
-        System.out.println(Arrays.toString(pre));
-        System.out.println(Arrays.toString(post));
+      
 
         for(int i=0;i<nums.length;i++)
         {
