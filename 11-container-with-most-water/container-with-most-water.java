@@ -7,11 +7,11 @@ class Solution {
         while(i<j){
             int min=(Math.min(arr[i],arr[j]));
             ans=Math.max(ans,(j-i)*min);
-            // if(arr[j]>arr[i]) i++;
-            // else j--;
+            if(arr[j]>arr[i]) i++;
+            else j--;
 
-            while(arr[i]<=min && i<j) i++;
-            while(arr[j]<=min && i<j) j--;
+            // while(arr[i]<=min && i<j) i++;
+            // while(arr[j]<=min && i<j) j--;
        
         }
        
