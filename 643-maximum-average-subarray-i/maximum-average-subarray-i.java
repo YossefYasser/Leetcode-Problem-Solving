@@ -6,8 +6,8 @@ class Solution {
       double max=sum;
       l=1;
       r++;
-     
-      while(r<nums.length)
+     int n =nums.length;
+      while(r<n)
       {
          sum = (double)sum-nums[-1+l++]+nums[r++];
          max=Math.max(sum,max);
