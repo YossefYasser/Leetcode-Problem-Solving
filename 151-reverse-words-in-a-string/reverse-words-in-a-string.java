@@ -1,29 +1,33 @@
 class Solution {
     public String reverseWords(String s) {
         List<String> list = new ArrayList();
-         String x ;
-        for( int i =0;i<s.length();i++)
+         String result ="";
+         int temp;
+         boolean notFirst = false;
+        for( int i =s.length()-1;i>=0;i--)
         {
             if(Character.isLetterOrDigit(s.charAt(i)))
             {
-                x="";
-                while(Character.isLetterOrDigit(s.charAt(i)) )
+                temp=i;
+               
+                while(i>=0 &&Character.isLetterOrDigit(s.charAt(i)) )
                 {
-                x += s.charAt(i);
-                i++;
-                if( i==s.length()) break;
+                i--;
                 }
-                list.add(x);
+                if(notFirst)
+                { 
+                 result+= " ";
+                 result +=(s.substring(i+1,temp+1));
+                }
+                else
+                {
+                    result +=(s.substring(i+1,temp+1));
+                    notFirst = true;
+                }
 
             }
         }
-        String result="";
-        for (int i = list.size()-1;i>=0;i--)
-        {
-            result += list.get(i);
-            if(i != 0)
-            result += " ";
-        }
+       
         return result;
     }
 
