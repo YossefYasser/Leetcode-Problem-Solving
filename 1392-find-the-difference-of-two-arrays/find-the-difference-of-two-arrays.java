@@ -5,42 +5,35 @@ class Solution {
         List<List<Integer>> result = new ArrayList<>();
         result.add(new ArrayList<>());
         result.add(new ArrayList<>());
-        boolean found = false;
+
 
                 for(int i =0 ; i<nums1.length;i++)
                 {
-                    for(int j =0 ; j<nums2.length;j++)
-                    {
-                        if(nums1[i]==nums2[j])
-                        {
-                                                        found = true;
-
-                            break;
-                        }
-                    }
-                     if(! result.get(0).contains(nums1[i]) && !found )
-                        result.get(0).add(nums1[i]);
-                    found = false;
-                } 
-               
-
-   for(int i =0 ; i<nums2.length;i++)
+                    hash1.add(nums1[i]);
+                }
+                for(int j =0 ; j<nums2.length;j++)
                 {
-                    for(int j =0 ; j<nums1.length;j++)
-                    {
-                        if(nums2[i]==nums1[j])
-                        {
-                                                        found = true;
-
-                            break;
-                        }
-                    }
-                     if(! result.get(1).contains(nums2[i])&& !found )
-                        result.get(1).add(nums2[i]);
-                    found = false;
+                    hash2.add(nums2[j]);
                 }
 
-               
+
+                for(int i =0 ; i<nums1.length;i++)
+                {
+                    if(!hash2.contains(nums1[i]))
+                    {
+                         if(! result.get(0).contains(nums1[i]))
+                        result.get(0).add(nums1[i]);
+                    }
+                }
+                for(int j =0 ; j<nums2.length;j++)
+                {
+                    if(!hash1.contains(nums2[j]))
+                    {
+                        if(! result.get(1).contains(nums2[j]))
+                        result.get(1).add(nums2[j]);
+                    }
+
+                }
 
         return result;
     }
