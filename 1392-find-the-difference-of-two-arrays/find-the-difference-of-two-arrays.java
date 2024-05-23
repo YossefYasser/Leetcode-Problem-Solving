@@ -1,7 +1,7 @@
 class Solution {
     public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
             HashSet<Integer>  hash1 = new HashSet<>();
-                        HashSet<Integer>  hash11 = new HashSet<>();
+         HashSet<Integer>  hash11 = new HashSet<>();
 
         HashSet<Integer>  hash2 = new HashSet<>();
         List<List<Integer>> result = new ArrayList<>();
@@ -36,10 +36,9 @@ class Solution {
                     }
 
                 }
-         List<Integer> ans1 = new ArrayList<>(hash1), ans2 = new ArrayList<>(hash2);
 
-        result.add(ans1);
-        result.add(ans2);
+        result.add(new ArrayList<>(hash1));
+        result.add(new ArrayList<>(hash2));
         return result;
     }
 }
