@@ -10,21 +10,22 @@ class Solution {
             temp = s.charAt(l);
             x.setCharAt(l,s.charAt(r));
             x.setCharAt(r,temp);
-            l++;r--;
+            
         }
        else if(hash.contains(s.charAt(l)) && !hash.contains(s.charAt(r)))
         {
             r--;
+            continue;
             
         }
         else if(!hash.contains(s.charAt(l)) && hash.contains(s.charAt(r)))
         {
             l++;
+            continue;
         }
-        else
-        {
+        
             l++;r--;
-        }
+        
       }
 return x.toString();
 
