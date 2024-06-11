@@ -6,24 +6,24 @@ class Solution {
             if (top == -1) {
                 stack[++top] = g;
             } else {
-                if (g < 0) {
-                    if (stack[top] < 0) {
+                if (g < 0) { // moving to left
+                    if (stack[top] < 0) { // top also moving to left
                         stack[++top] = g;
                     } else {
                         while (top >= 0 && stack[top] > 0 && stack[top] < (-g)) {
-                            top--;
+                            top--; // bnshel kol ele f skto w a2l mno
                         }
                         if (top >= 0) {
                             if (stack[top] > 0 && stack[top] == (-g)) {
-                                top--;
+                                top--; // hy3ml de w ytl3
                             } else if (stack[top] < 0) {
                                 stack[++top] = g;
                             }
-                        } else {
+                        } else {//el stack fady zwd ele m3ana 3shan da khls 3la kolo
                             stack[++top] = g;
                         }
                     }
-                } else {
+                } else { // moving to right msh h3ml 7aaga swa2 el top right aw left
                     stack[++top] = g;
                 }
             }
