@@ -15,8 +15,6 @@ class RecentCounter {
             q.poll();
            
         }
-        
-        
 
         return q.size();
     }
