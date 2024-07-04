@@ -28,7 +28,6 @@ if(guess(mid) ==1)
         l = mid+1;
         dou =((long)l+(long)r);
         mid = (int)(dou/2);
-                System.out.println("left is " + l + " right is " + r + " and mid is " + mid);
 
 
     }
@@ -38,7 +37,6 @@ else if( guess(mid)==-1)
         r = mid-1;
         dou =((long)l+(long)r);
         mid = (int)(dou/2);
-        System.out.println("left is " + l + " right is " + r + " and mid is " + mid);
 
     }
 
