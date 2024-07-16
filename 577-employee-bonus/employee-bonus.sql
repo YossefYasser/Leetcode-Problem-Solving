@@ -1,3 +1,4 @@
+# Write your MySQL query statese
 select E.name,B.bonus
 from Employee E 
  left join  Bonus B 
