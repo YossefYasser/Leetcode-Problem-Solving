@@ -19,16 +19,16 @@ class Solution {
         q.add(root);
         int depth = 0;
         int size;
+        TreeNode peek;
         while (q.peek()!=null)
          {   size = q.size();
-            
             for(int i =0; i < size;i++)
                 {
-
-                    if(q.peek().left != null)
-                        q.add(q.peek().left);
-                    if(q.peek().right != null)
-                        q.add(q.peek().right);   
+                peek= q.peek();
+                    if(peek.left != null)
+                        q.add(peek.left);
+                    if(peek.right != null)
+                        q.add(peek.right);   
                     q.remove();
 
                 }
