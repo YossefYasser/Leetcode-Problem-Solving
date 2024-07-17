@@ -21,7 +21,7 @@ class Solution {
         int size;
         while (q.peek()!=null)
          {   size = q.size();
-
+            
             for(int i =0; i < size;i++)
                 {
 
