@@ -18,6 +18,7 @@ class Solution {
     ArrayList<Integer> tree2 = new ArrayList<>();    
     public void visitLeaves(TreeNode root,  boolean treeOne)
     {
+        if(root==null)  return;
         if( root.left == null && root.right == null )
             {
                 if(treeOne)
@@ -27,10 +28,8 @@ class Solution {
             }
         
         
-        if(root.left!=null)
+       
             visitLeaves(root.left,treeOne);
-        
-        if( root.right!=null)
             visitLeaves(root.right,treeOne);
     
 
