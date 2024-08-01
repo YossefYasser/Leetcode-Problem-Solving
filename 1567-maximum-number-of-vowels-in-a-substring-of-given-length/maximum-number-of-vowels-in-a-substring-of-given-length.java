@@ -4,7 +4,6 @@ class Solution {
         int r = k-1;
         HashSet<Character> vowels = new HashSet<>();
         vowels.add('a');vowels.add('e');vowels.add('i');vowels.add('o');vowels.add('u');
-        // int max = 0;
         int counter =0;
         int max = 0;
         
