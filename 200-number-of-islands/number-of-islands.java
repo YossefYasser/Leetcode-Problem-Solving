@@ -4,6 +4,7 @@ class Solution {
     {
         return i >= 0 && i < grid.length && j >= 0 && j < grid[0].length && grid[i][j] == '1'; 
     }
+    // to traverse nodes, it marks connected nodes as an island
     public void dfs (char[][] grid , int i , int j)
    
     {
@@ -14,7 +15,6 @@ class Solution {
         if(valid(i,j-1,grid)) dfs(grid,i,j-1);
         if(valid(i+1,j,grid)) dfs(grid,i+1,j);
         if(valid(i-1,j,grid)) dfs(grid,i-1,j);
-        System.out.println("Hi");
 
 
     }
