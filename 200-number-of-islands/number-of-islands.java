@@ -8,13 +8,13 @@ class Solution {
     public void dfs (char[][] grid , int i , int j)
    
     {
-        if( vis[i][j] ==1 )
+        if( ! valid(i,j,grid) || vis[i][j] ==1 )
             return;
         vis[i][j] =1 ;
-        if(valid(i,j+1,grid)) dfs(grid,i,j+1);
-        if(valid(i,j-1,grid)) dfs(grid,i,j-1);
-        if(valid(i+1,j,grid)) dfs(grid,i+1,j);
-        if(valid(i-1,j,grid)) dfs(grid,i-1,j);
+        dfs(grid,i,j+1);
+        dfs(grid,i,j-1);
+        dfs(grid,i+1,j);
+        dfs(grid,i-1,j);
 
 
     }
